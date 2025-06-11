@@ -4,7 +4,7 @@ import { NavLink, useNavigate } from 'react-router-dom';
 const Header = () => {
     const { isAuthenticated, logout } = useAuth();
     const navigate = useNavigate();
-
+console.log(":::")
     const handleLogout = () => {
         logout();
         navigate('/login');
