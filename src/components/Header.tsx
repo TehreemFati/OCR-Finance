@@ -1,14 +1,19 @@
 import { useAuth } from '../context/AuthContext';
-import { NavLink, useNavigate } from 'react-router-dom';
+import {
+    NavLink,
+    // useNavigate 
+} from 'react-router-dom';
 
 const Header = () => {
-    const { isAuthenticated, logout } = useAuth();
-    const navigate = useNavigate();
+    const { isAuthenticated,
+        // logout 
+    } = useAuth();
+    // const navigate = useNavigate();
 
-    const handleLogout = () => {
-        logout();
-        navigate('/login');
-    };
+    // const handleLogout = () => {
+    //     logout();
+    //     navigate('/login');
+    // };
 
     return (
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">

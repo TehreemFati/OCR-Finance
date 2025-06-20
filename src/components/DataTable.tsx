@@ -2,7 +2,7 @@ import React from 'react';
 import { calculateTotalBalance, type BalanceRow } from '../utils/utils';
 
 interface DataTableProps {
-    data: Record<string, string>[];
+    data: any;
 }
 
 const DataTable: React.FC<DataTableProps> = ({ data }) => {
@@ -31,7 +31,7 @@ const DataTable: React.FC<DataTableProps> = ({ data }) => {
             </thead>
 
             <tbody>
-                {data.map((row, idx) => (
+                {data.map((row:any, idx:number) => (
                     <tr key={idx}>
                         {columns.map((col) => (
                             <td key={col} className={col === 'AMOUNT' ? 'text-end' : undefined}>
